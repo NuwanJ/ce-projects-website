@@ -11,7 +11,8 @@ on:
 
 jobs:
   jekyll:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
 
@@ -23,6 +24,10 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gems-
           
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6
     - name: Install dependencies
       run: bundle install
       
