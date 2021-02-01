@@ -9,7 +9,7 @@ on:
   schedule:
     - cron: "0 0 * * *"
 
-jjobs:
+jobs:
   jekyll:
     runs-on: ubuntu-16.04
     steps:
